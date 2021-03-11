@@ -1,0 +1,12 @@
+a='Капуста {2} , Огурец {1}, Морковь {0}'
+a=a.upper()
+print(a)
+a=a.lower()
+print(a)
+a=a.capitalize()
+print(a)
+c=input("введите количество капусты =")
+d=input('введите количество огурца =')
+x=input('введите количество морковь =')
+rez = a.format(c, d, x)
+print(rez)
