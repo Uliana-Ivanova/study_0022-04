@@ -4,7 +4,6 @@ print('имя файла:', my_file.name)
 my_file.write("один:десять,два:девять,три:восемь")
 # чтение файла
 string = my_file.read()
-
 print(string)
 print('я на позиции:', my_file.tell())
 
