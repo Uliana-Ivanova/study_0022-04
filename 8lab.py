@@ -12,4 +12,5 @@ print('я на позиции:', my_file.tell())
 my_file.seek(0)
 print('я на позиции:', my_file.tell())
 # закрытие файла
+print('файл закрыт:', my_file.closed)
 my_file.close()
