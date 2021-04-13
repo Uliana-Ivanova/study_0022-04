@@ -1,74 +1,91 @@
 import math
 import random
-choise=input('''Введите наименование операции которую нужно осуществить
-+ сложение;  - вычитание;  * умножение;  / деление;   arccos арккосинус; 
- random рандом от 0 до 100;   ** возведение в степень;   mod модуль;  ! факториал; 5 - переделанная задача номер 5''')
+choise = input('''Введите наименование операции которую нужно осуществить
++ сложение; 
+- вычитание; 
+* умножение; 
+/ деление; 
+arccos арккосинус; 
+random рандом от 1 до 30; 
+** возведение в степень;  
+mod модуль; 
+ ! факториал;
+  5 - переделанная задача номер 5''')
 
-
-if choise == '+':      #сложение чисел
-   def umn(x,y):
-       c=x+y
+# сложение чисел
+if choise == '+':
+   def umn(x, y):
+       c = x+y
        return c
-   x=int(input('vvedite chislo:'))
-   y = int(input('vvedite chislo:'))
-   c=umn(x,y)
+   x = int(input('введите число:'))
+   y = int(input('введите число:'))
+   c = umn(x, y)
    print(c)
 
-elif choise == '-':    #вычитание чисел
+# вычитание чисел
+elif choise == '-':
     def umn(x, y):
         c = x - y
         return c
-    x = int(input('vvedite chislo:'))
-    y = int(input('vvedite chislo:'))
+    x = int(input('введите число:'))
+    y = int(input('введите число:'))
     c = umn(x, y)
     print(c)
 
-elif choise == '*':     #умножение чисел
+# умножение чисел
+elif choise == '*':
     def umn(x, y):
         c = x * y
         return c
-    x = int(input('vvedite chislo:'))
-    y = int(input('vvedite chislo:'))
+    x = int(input('введите число:'))
+    y = int(input('введите число:'))
     c = umn(x, y)
     print(c)
 
-elif choise == '/':     #деление чисел
+# деление чисел
+elif choise == '/':
     def umn(x, y):
         c = x / y
         return c
-    x = int(input('vvedite chislo:'))
-    y = int(input('vvedite chislo:'))
+    x = int(input('введите число:'))
+    y = int(input('введите число:'))
     c = umn(x, y)
     print(c)
 
-elif choise == '**':    #возведение в степень
+# возведение в степень
+elif choise == '**':
     def umn(x, y):
         c = x ** y
         return c
-    x = int(input('vvedite chislo:'))
-    y = int(input('vvedite chislo:'))
+    x = int(input('введите число:'))
+    y = int(input('введите число:'))
     c = umn(x, y)
     print(c)
 
-elif choise == 'random':      #поиск рандомного числа
+# поиск рандомного числа
+elif choise == 'random':
     print('рандом от 1 до 30')
-    l=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-    c=random.choice(l)
+    l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+    c = random.choice(l)
     print(c)
 
-elif choise == 'arccos':        #поиск арккосинуса числа
-    x=int(input('vvedite chislo:'))
+# поиск арккосинуса числа
+elif choise == 'arccos':
+    x = int(input('введите число:'))
     print("acos(x):", math.acos(x))
 
-elif choise == 'mod':          #нахождение модуля числа
-   x=int(input('введите 1 число'))
+# нахождение модуля числа
+elif choise == 'mod':
+   x = int(input('введите 1 число'))
    print(math.fabs(x))
 
-elif choise == '!':             #нахождение факториала числа
-   x=int(input('введите 1 число'))
+# нахождение факториала числа
+elif choise == '!':
+   x = int(input('введите 1 число'))
    print("факториал числа", math.factorial(x))
 
-elif choise =='5':              #решение 5 задачи с помощью функции
+# решение 5 задачи с помощью функции
+elif choise =='5':
     print('введите строку до 10 слов')
     list = input(' введите первую строку слов:')
     b = len(list.split(' '))
@@ -85,7 +102,7 @@ elif choise =='5':              #решение 5 задачи с помощью
     words = list.split(',')
     words1 = list1.split(',')
 
-    if (b != c):
+    if b != c:
         print('количество слов не равно между собой')
     else:
         print('количество слов равно')
@@ -93,5 +110,6 @@ elif choise =='5':              #решение 5 задачи с помощью
         d = {}
         d = {list[0]: list1[0], list[1]: list1[1], list[2]: list1[2], list[3]: list1[3], list[4]: list1[4],
              list[5]: list1[5], list[6]: list1[6], list[7]: list1[7], list[8]: list1[8], list[9]: list1[9]}
-        print(d)      #вывод словаря
+        # вывод словаря
+        print(d)
 
