@@ -1,0 +1,34 @@
+import math
+import random
+print(' Для расчета калькулятора задано два значения 5 и -2\n вычисление модуля будет по -2  ')
+print('для вычисление факториала используем число 5\n рандом берется от 0-100\n')
+
+# создаем класс
+class Calculator:
+    def __init__(self, param1, param2):
+
+# математические операции к выполнению
+             self.value1 = param1 * param2
+             self.value2 = param1 / param2
+             self.value3=param1 + param2
+             self.value4 = param1 - param2
+             self.value5 = param1 ** param2
+             self.value7 = abs(param2)
+             self.value8=random.randint(0, 100)
+             self.value9 =math.factorial(param1)
+
+    def get_list (self):
+
+# вид выдода на экран значений
+     print('5*(-2)=',self.value1)
+     print('5/(-2)=',self.value2)
+     print('5+(-2)=', self.value3)
+     print('5-(-2)=', self.value4)
+     print('5**(-2)=', self.value5)
+     print('mod(-2)=', self.value7)
+     print('random(0-100)=', self.value8)
+     print('factorial(5)=', self.value9)
+
+        # задаем калькулятору значения для вычисления и вывод на экран
+num_class = Calculator (5, -2)
+print(num_class.get_list())
