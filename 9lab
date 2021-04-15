@@ -1,9 +1,8 @@
 import math
 import random
-
-x=input("введите 1 число=")
-y=input("введите 2 число=")
-
+print(" вычисление mod и ! будет по первому числу\n рандом берется от 0-100\n")
+x=int(input("введите 1 число="))
+y=int(input("введите 2 число="))
 choise = input('''Введите наименование операции которую нужно осуществить
 + сложение; 
 - вычитание; 
@@ -15,14 +14,15 @@ mod модуль;
  ! факториал;
  ''')
 # создаем класс
-class Calculator:          
-    def __init__(self, param1, param2):
+class Calculator:
+
+    def __init__(self, param1=x, param2=y):
         self.value1 = param1 * param2
         self.value2 = param1 / param2
         self.value3 = param1 + param2
         self.value4 = param1 - param2
         self.value5 = param1 ** param2
-        self.value7 = abs(param2)
+        self.value7 = abs(param1)
         self.value8 = random.randint(0, 100)
         self.value9 = math.factorial(param1)
 
@@ -46,5 +46,6 @@ class Calculator:
         if choise=='!':
          print('factorial(',x,')=', self.value9)
 
-num_class = Calculator (5, -2)
+num_class = Calculator (x,y)
 print(num_class.get_list())
+
