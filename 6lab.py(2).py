@@ -22,8 +22,7 @@ if b != c:
 else:
         print('количество слов равно')
         print('создадим соварь')
-        d = {}
-        d = {list[0]: list1[0], list[1]: list1[1], list[2]: list1[2], list[3]: list1[3], list[4]: list1[4],
-             list[5]: list1[5], list[6]: list1[6], list[7]: list1[7], list[8]: list1[8], list[9]: list1[9]}
-        # вывод словаря
-        print(d)
+         d={ }
+        for a,b in zip(words,words1):
+                d[a]=b
+                print(d)
